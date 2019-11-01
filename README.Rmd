@@ -1,0 +1,14 @@
+---
+output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: inline
+---
+```{r pkg-knitr-opts, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE, fig.retina = 2, message = FALSE, warning = FALSE
+)
+options(width=120)
+```
+
+# y2019-30daymapchallenge
+
