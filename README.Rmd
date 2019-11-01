@@ -1,7 +1,7 @@
 ---
 output: rmarkdown::github_document
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 ```{r pkg-knitr-opts, include=FALSE}
 knitr::opts_chunk$set(
@@ -10,5 +10,15 @@ knitr::opts_chunk$set(
 options(width=120)
 ```
 
-# y2019-30daymapchallenge
+# 30 Day Map Challenge
 
+```{r echo=FALSE}
+library(googlesheets)
+library(tidyverse)
+
+gs_auth()
+gs_url("https://docs.google.com/spreadsheets/d/13LqOIQp17oEXx8R6vcJPDsvaII8nD9tJ_5DF9G7oZ18/edit#gid=0") %>% 
+  gs_read() %>% 
+  select(-Idea, -Data) %>% 
+  knitr::kable('markdown')
+```

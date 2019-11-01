@@ -1,0 +1,91 @@
+---
+title: "Points"
+author: "hrbrmstr"
+date: "2019-11-01"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## School Ransomware Incidents
+
+```{r}
+library(googlesheets)
+library(sf)
+library(rgeocodio) # hrbrmstr/rgeocodio
+library(albersusa) # hrbrmstr/albersusa
+library(hrbrthemes) # hrbrmstr/hrbrthemes
+library(tidyverse)
+
+gs_auth()
+
+gs_url("https://docs.google.com/spreadsheets/d/1p-_GRo4YPW7m4QnjvErKD4U67t8-O6aDBlRjy9V8g8Y/edit#gid=1925609334") %>% 
+  gs_read() %>% 
+  mutate(
+    year_public = ifelse(
+      year_public < 2000, lubridate::year(date_added), year_public
+    ) %>% factor()
+  ) %>% 
+  select(year_public, city_st) -> xdf
+
+if (!file.exists(here::here("data/2019-11-01-geocoded.rds"))) {
+  coded <- gio_batch_geocode(xdf$city_st)
+  saveRDS(coded, here::here("data/2019-11-01-geocoded.rds"))
+}
+
+coded <- readRDS(here::here("data/2019-11-01-geocoded.rds"))
+
+bind_cols(
+  xdf,
+  select(coded, r = response_results, state) %>% 
+    mutate(r = map(r, ~.x[1,])) %>% 
+    unnest(r) %>% 
+    select(state, lng = location.lng, lat = location.lat) 
+) %>% 
+  filter(!is.na(lat), !is.na(lng)) -> xdf
+
+outside <- filter(xdf, state %in% c("AK", "HI"))
+
+bind_cols(
+  select(outside, year_public, state),
+  select(outside, lng, lat) %>% 
+    points_elided() %>% 
+    rename(lng = x, lat = y)
+) %>% 
+  bind_rows(
+    filter(xdf, !(state %in% c("AK", "HI"))) %>% 
+      select(year_public, state, lng, lat)
+  ) %>% 
+  left_join(
+    count(., year_public)
+  ) %>% 
+  mutate(lab = glue::glue("{year_public} : {n} Tracked Incidents")) %>% 
+  st_as_sf(coords = c("lng", "lat"), crs = us_longlat_proj) -> incidents
+
+usa <- usa_sf("laea")
+
+ggplot() +
+  geom_sf(
+    data = usa, fill = "#3B454A", size = 0.125, color = "#b2b2b277"
+  ) +
+  geom_sf(
+    data = incidents, aes(fill = lab), 
+    color = "white", size = 1.5, alpha = 2/3, shape = 21,
+    show.legend = FALSE
+  ) + 
+  ggthemes::scale_color_tableau() +
+  coord_sf(datum = NA) +
+  facet_wrap(~lab) +
+  labs(
+    title = "Locations of K-12 Ransomware Indidents 2016-2019 (Sept)",
+    caption = "https://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
+  ) +
+  theme_ft_rc(grid="", strip_text_face = "bold") +
+  theme(axis.text = element_blank()) +
+  theme(strip.text = element_text(color = "white"))
+```
+
