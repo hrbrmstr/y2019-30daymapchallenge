@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<Esri>
+		<CreaDate>20150501</CreaDate>
+		<CreaTime>09023600</CreaTime>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+		<SyncOnce>FALSE</SyncOnce>
+		<DataProperties>
+			<itemProps>
+				<itemName Sync="TRUE">ne_110m_ocean</itemName>
+				<nativeExtBox>
+					<westBL Sync="TRUE">-180.000000</westBL>
+					<eastBL Sync="TRUE">180.000000</eastBL>
+					<southBL Sync="TRUE">-85.609038</southBL>
+					<northBL Sync="TRUE">90.000000</northBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</nativeExtBox>
+				<itemSize Sync="TRUE">0.081</itemSize>
+				<itemLocation>
+					<linkage Sync="TRUE">file://\\SUL-GISLAB\GIS_Shared\GIS_Lab\DATA\World_BaseLayers_2010_NaturalEarth2.0.0\natural_earth_vector\110m_physical\ne_110m_ocean.shp</linkage>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+				</itemLocation>
+				<imsContentType export="False"/>
+			</itemProps>
+			<coordRef>
+				<type Sync="TRUE">Geographic</type>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+				<csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits>
+				<peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4326]]&lt;/WKT&gt;&lt;XOrigin&gt;-400&lt;/XOrigin&gt;&lt;YOrigin&gt;-400&lt;/YOrigin&gt;&lt;XYScale&gt;11258999068426.238&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.983152841195215e-009&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4326&lt;/WKID&gt;&lt;LatestWKID&gt;4326&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml>
+			</coordRef>
+			<copyHistory>
+				<copy date="20150501" dest="\\SUL-GISLAB\GIS_Shared\GIS_Lab\DATA\World_BaseLayers_2010_NaturalEarth2.0.0\natural_earth_vector\SGC" source="Q:\World_Hydrosheds_USGS\SGC" time="09023600"/>
+			</copyHistory>
+		</DataProperties>
+		<SyncDate>20150609</SyncDate>
+		<SyncTime>13080400</SyncTime>
+		<ModDate>20150609</ModDate>
+		<ModTime>13080400</ModTime>
+		<ArcGISProfile>ISO19139</ArcGISProfile>
+		<scaleRange>
+			<minScale>150000000</minScale>
+			<maxScale>5000</maxScale>
+		</scaleRange>
+	</Esri>
+	<mdLang>
+		<languageCode value="eng"/>
+		<countryCode Sync="TRUE" value="USA"/>
+	</mdLang>
+	<mdChar>
+		<CharSetCd value="004"/>
+	</mdChar>
+	<mdParentID>http://purl.stanford.edu/qr604qw5282.mods</mdParentID>
+	<mdHrLv>
+		<ScopeCd value="005"/>
+	</mdHrLv>
+	<distInfo>
+		<distTranOps>
+			<onLineSrc>
+				<linkage>http://purl.stanford.edu/nb441cf3002</linkage>
+				<protocol>http</protocol>
+				<orFunct>
+					<OnFunctCd value="001"/>
+				</orFunct>
+				<orName>ne_110m_ocean.shp</orName>
+			</onLineSrc>
+			<transSize Sync="TRUE">0.081</transSize>
+		</distTranOps>
+		<distributor>
+			<distorCont>
+				<rpOrgName>Stanford Geospatial Center</rpOrgName>
+				<rpCntInfo>
+					<cntAddress addressType="physical">
+						<delPoint>Branner Earth Sciences Library</delPoint>
+						<city>Stanford</city>
+						<adminArea>California</adminArea>
+						<postCode>94305</postCode>
+						<eMailAdd>brannerlibrary@stanford.edu</eMailAdd>
+						<delPoint>Mitchell Building, 2nd Floor</delPoint>
+						<delPoint>397 Panama Mall</delPoint>
+					</cntAddress>
+					<cntPhone>
+						<voiceNum>650-723-2746</voiceNum>
+					</cntPhone>
+				</rpCntInfo>
+				<displayName>Stanford Geospatial Center</displayName>
+				<displayName>Stanford Geospatial Center</displayName>
+				<role>
+					<RoleCd value="005"/>
+				</role>
+				<displayName>Stanford Geospatial Center</displayName>
+			</distorCont>
+		</distributor>
+		<distFormat>
+			<formatName Sync="TRUE">Shapefile</formatName>
+		</distFormat>
+	</distInfo>
+	<dataIdInfo>
+		<idCredit>Kelso, N.V. and Patterson, T. (2012). World Oceans, 1:110 million (2012). Made with Natural Earth, online at http://www.naturalearthdata.com.</idCredit>
+		<themeKeys>
+			<thesaName>
+				<resTitle>lcsh</resTitle>
+				<date>
+					<reviseDate>2011-04-26T00:00:00</reviseDate>
+				</date>
+				<citId>
+					<identCode>http://id.loc.gov/authorities/subjects.html</identCode>
+				</citId>
+			</thesaName>
+			<keyword>Bodies of water</keyword>
+			<keyword>Seas</keyword>
+		</themeKeys>
+		<placeKeys>
+			<thesaName>
+				<resTitle>geonames</resTitle>
+				<date>
+					<reviseDate>2012-11-01T00:00:00</reviseDate>
+				</date>
+				<resEd>3.1</resEd>
+				<citId>
+					<identCode>http://www.geonames.org/ontology#</identCode>
+				</citId>
+			</thesaName>
+			<keyword>Earth (Planet)</keyword>
+		</placeKeys>
+		<idCitation>
+			<citId>
+				<identCode>http://purl.stanford.edu/nb441cf3002</identCode>
+			</citId>
+			<collTitle>Natural Earth</collTitle>
+			<date>
+				<pubDate>2012-11-08T00:00:00</pubDate>
+			</date>
+			<resTitle Sync="FALSE">World Oceans, 1:110 million (2012)</resTitle>
+			<citRespParty>
+				<rpOrgName>North American Cartographic Information Society</rpOrgName>
+				<role>
+					<RoleCd value="010"/>
+				</role>
+			</citRespParty>
+			<citRespParty>
+				<rpIndName>Patterson, Tom</rpIndName>
+				<role>
+					<RoleCd value="006"/>
+				</role>
+			</citRespParty>
+			<citRespParty>
+				<rpOrgName>Kelso, Nathaniel Vaughn</rpOrgName>
+				<role>
+					<RoleCd value="006"/>
+				</role>
+			</citRespParty>
+			<resEd>2.0.0</resEd>
+			<otherCitDet>These data were downloaded from the Natural Earth website (http://www.naturalearthdata.com) on June 15, 2014. </otherCitDet>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"/>
+			</presForm>
+		</idCitation>
+		<dataLang>
+			<languageCode value="eng"/>
+			<countryCode Sync="TRUE" value="USA"/>
+		</dataLang>
+		<dataChar>
+			<CharSetCd value="004"/>
+		</dataChar>
+		<idPurp>Natural Earth is a public domain map dataset available at 1:10, 1:50 and 1:110 million scales. Featuring tightly integrated vector and raster data, with Natural Earth you can make a variety of visually pleasing, well-crafted maps with cartography or GIS software.</idPurp>
+		<idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P STYLE="margin:7 0 7 0;"&gt;&lt;SPAN&gt;This polygon shapefile depicts oceans split into contiguous pieces. Ocean polygon is the same as Bathymetry 0 (sea level). This theme (and its inverse cousin, Land) are used to clip the raster imagery. These data are represented at 1:110,000,000 scale. This layer is part of the Natural Earth Collection (v.2.0.0).&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</idAbs>
+		<tempKeys>
+			<keyword>2012</keyword>
+		</tempKeys>
+		<idStatus>
+			<ProgCd value="001"/>
+		</idStatus>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="search">
+					<exTypeCode>1</exTypeCode>
+					<westBL Sync="TRUE">-180.000000</westBL>
+					<eastBL Sync="TRUE">180.000000</eastBL>
+					<northBL Sync="TRUE">90.000000</northBL>
+					<southBL Sync="TRUE">-85.609038</southBL>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<dataExt>
+			<exDesc>publication date</exDesc>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2012-11-08T00:00:00</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+		</dataExt>
+		<aggrInfo>
+			<assocType>
+				<AscTypeCd value="002"/>
+			</assocType>
+			<initType>
+				<InitTypCd value="002"/>
+			</initType>
+			<aggrDSName>
+				<resTitle>Natural Earth</resTitle>
+				<date>
+					<pubDate>2012-11-08T00:00:00</pubDate>
+				</date>
+				<resEd>2.0.0</resEd>
+				<citId>
+					<identCode>http://purl.stanford.edu/qr604qw5282</identCode>
+				</citId>
+				<citRespParty>
+					<rpIndName>Patterson, Tom</rpIndName>
+					<role>
+						<RoleCd value="006"/>
+					</role>
+					<displayName>Patterson, Tom</displayName>
+				</citRespParty>
+				<citRespParty>
+					<rpOrgName>Kelso, Nathaniel Vaughn</rpOrgName>
+					<role>
+						<RoleCd value="006"/>
+					</role>
+					<displayName>Kelso, Nathaniel Vaughn</displayName>
+				</citRespParty>
+				<citRespParty>
+					<rpOrgName>North American Cartographic Information Society</rpOrgName>
+					<role>
+						<RoleCd value="010"/>
+					</role>
+					<displayName>North American Cartographic Information Society</displayName>
+				</citRespParty>
+			</aggrDSName>
+		</aggrInfo>
+		<resConst>
+			<LegConsts>
+				<useLimit>All versions of Natural Earth raster + vector map data found on this website are in the public domain. You may use the maps in any manner, including modifying the content and design, electronic dissemination, and offset printing. The primary authors, Tom Patterson and Nathaniel Vaughn Kelso, and all other contributors renounce all financial claim to the maps and invites you to use them for personal, educational, and commercial purposes.
+No permission is needed to use Natural Earth. Crediting the authors is unnecessary.</useLimit>
+			</LegConsts>
+		</resConst>
+		<idPoC>
+			<rpIndName>Nathaniel Vaughn Kelso</rpIndName>
+			<rpOrgName>Natural Earth</rpOrgName>
+			<rpPosName>Project manager</rpPosName>
+			<role>
+				<RoleCd value="007"/>
+			</role>
+			<rpCntInfo>
+				<cntAddress addressType="">
+					<eMailAdd>nathaniel@naturalearthdata.com</eMailAdd>
+				</cntAddress>
+			</rpCntInfo>
+		</idPoC>
+		<dataScale>
+			<equScale>
+				<rfDenom>110000000</rfDenom>
+			</equScale>
+		</dataScale>
+		<envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</envirDesc>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"/>
+		</spatRpType>
+		<tpCat>
+			<TopicCatCd value="014"/>
+		</tpCat>
+	</dataIdInfo>
+	<dataSetURI>http://purl.stanford.edu/nb441cf3002</dataSetURI>
+	<mdFileID>edu.stanford.purl:nb441cf3002</mdFileID>
+	<mdContact>
+		<editorSource>external</editorSource>
+		<editorDigest>8112593d10cd6aa7c8f3c3da6c3533d0</editorDigest>
+		<rpOrgName>Stanford Geospatial Center</rpOrgName>
+		<rpCntInfo>
+			<cntAddress addressType="both">
+				<delPoint>Mitchell Bldg. 2nd floor</delPoint>
+				<city>Stanford</city>
+				<adminArea>California</adminArea>
+				<postCode>94305</postCode>
+				<eMailAdd>brannerlibrary@stanford.edu</eMailAdd>
+				<country>US</country>
+				<delPoint>397 Panama Mall</delPoint>
+			</cntAddress>
+			<cntPhone>
+				<voiceNum tddtty="">650-723-2746</voiceNum>
+			</cntPhone>
+		</rpCntInfo>
+		<displayName>Stanford Geospatial Center</displayName>
+		<editorSave>True</editorSave>
+		<displayName>Stanford Geospatial Center</displayName>
+		<role>
+			<RoleCd value="007"/>
+		</role>
+	</mdContact>
+	<contInfo>
+		<FetCatDesc>
+			<compCode>False</compCode>
+			<catLang>
+				<languageCode value="eng"/>
+			</catLang>
+			<incWithDS>True</incWithDS>
+			<catCitation>
+				<resTitle>
+					<resTitle>Feature Catalog for</resTitle> World Oceans, 1:110 million (2012)</resTitle>
+				<date>
+					<pubDate>2012-11-08T00:00:00</pubDate>
+				</date>
+				<citId>
+					<identCode>b4544da9-4b17-4769-ae6e-616d0670f73b</identCode>
+				</citId>
+			</catCitation>
+		</FetCatDesc>
+	</contInfo>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" code="4326"/>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+				<idVersion Sync="TRUE">8.2.6</idVersion>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="ne_110m_ocean"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">2</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<spdoinfo>
+		<ptvctinf><esriterm Name="ne_110m_ocean"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">2</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<eainfo>
+		<detailed Name="ne_110m_ocean">
+			<enttyp>
+				<enttypl Sync="TRUE">ne_110m_ocean</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">2</enttypc>
+			</enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attalias Sync="TRUE">FID</attalias>
+				<attrtype Sync="TRUE">OID</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attwidth Sync="TRUE">0</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">scalerank</attrlabl>
+				<attalias Sync="TRUE">scalerank</attalias>
+				<attrtype Sync="TRUE">SmallInteger</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">4</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">featurecla</attrlabl>
+				<attalias Sync="TRUE">featurecla</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">30</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+		</detailed>
+	</eainfo>
+	<mdDateSt Sync="TRUE">20150609</mdDateSt>
+	<Binary>
+		<Thumbnail>
+			<Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqD7ZDkj94c
+Eg4jY8g4Pap6owMrLJtYHErg4PQ7jXNia0qUU0VFXJ/tcX/TT/v03+FH2uL/AKaf9+m/wqMuqkAs
+AT0BNOrj+v1OyK5EO+1xf9NP+/Tf4Ufa4v8App/36b/Cq11dJaxb25J6DPWs2PW5pXBWwlWErxM3
+I3dvqMc8flVxxVeSuoqwuVG39ri/6af9+m/wo+1xf9NP+/Tf4Vy1zrt+0jpDbldq8bcZLZx6Hj/6
+9XLa/mmiRJ43iutgZmnDxKT6AA9M9zj6GtlVrcvM7fiKyN37XF/00/79N/hR9ri/6af9+m/wrLs4
+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
+FFAH/9k=</Data>
+		</Thumbnail>
+	</Binary>
+</metadata>
