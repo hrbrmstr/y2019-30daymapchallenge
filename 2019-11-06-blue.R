@@ -14,13 +14,26 @@ ne_countries(scale = "medium", returnclass = "sf") %>%
 
 read_excel(here::here("data/Chapter2OnlineData.xlsx"), 2) %>%
   janitor::clean_names() %>%
-  select(country, happiness_score) -> happy
+  select(country, happiness_score) %>%
+  mutate(country = case_when(
+    country == "Russia" ~ "Russian Federation",
+    country == "Taiwan Province of China" ~ "Taiwan",
+    country == "Congo (Brazzaville)" ~ "Democratic Republic of the Congo",
+    country == "Congo (Kinshasa)" ~ "Republic of Congo",
+    country == "Gambia" ~ "The Gambia",
+    country == "Ivory Coast" ~ "Côte d'Ivoire",
+    country == "North Cyprus" ~ "Northern Cyprus",
+    country == "Palestinian Territories" ~ "Palestine",
+    country == "South Korea" ~ "Republic of Korea",
+    country == "Hong Kong S.A.R. of China" ~ "Hong Kong",
+    country == "Laos" ~ "Lao PDR",
+    TRUE ~ country
+  )) -> happy
 
 left_join(world, happy, by=c("name_long"="country")) %>%
   select(country=name_long, happiness_score) -> happy_spdf
 
 by_pal <- colorRampPalette(c("#313695", "#4575b4", "#74add1", "#abd9e9", "#e0f3f8", "#ffffbf", "#fee090"))(10)
-
 
 ggplot() +
   geom_sf(
@@ -35,7 +48,7 @@ ggplot() +
   guides(fill = guide_colorbar(title.position = "top")) +
   labs(
     title = "World Happiness Report 2019",
-    subtitle = "Average Happiness across Countries (Pooled OLS)",
+    subtitle = "Average Happiness across Countries (Pooled OLS);",
     caption = "Data source: <https://worldhappiness.report/faq/>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
   ) +
   theme_ft_rc(grid="") +
