@@ -31,7 +31,6 @@ count(tt, RTTYP)
 state <- filter(me_roads, RTTYP == "S")
 county <- filter(me_roads, RTTYP == "C")
 interstate <- filter(me_roads, RTTYP == "I")
-
 main <- filter(me_roads, RTTYP == "M")
 
 ggplot() +
