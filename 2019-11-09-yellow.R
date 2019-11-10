@@ -56,4 +56,4 @@ dev.off()
 
 img <- image_animate(img)
 
-image_write(x, "~/Desktop/terminus.gif")
+image_write(img, "~/Desktop/terminus.gif")

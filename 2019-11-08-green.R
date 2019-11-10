@@ -5,7 +5,7 @@ library(mapdeck)
 library(widgetcard)
 library(tidyverse)
 
-mapdeck_api_key <- Sys.getenv(MAPBOX_PUBLIC_TOKEN)
+mapdeck_api_key <- Sys.getenv("MAPBOX_PUBLIC_TOKEN")
 
 st_read(here::here("data/me-counties.json")) %>%
   st_set_crs(4326) -> maine
