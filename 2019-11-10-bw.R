@@ -6,20 +6,18 @@ library(tidyverse)
 st_read(here::here("data/me-counties.json")) %>%
   st_set_crs(4326) -> maine
 
-# list_counties("me") %>%
-#   pull(county) %>%
-#   map(~roads("me", .x, class="sf")) -> me_roads
-#
-# me_roads <- do.call(rbind, me_roads)
-#
-# st_write(me_roads, "~/Data/me-roads/me-roads.shp")
+list_counties("me") %>%
+  pull(county) %>%
+  map(~roads("me", .x, class="sf")) -> me_roads
 
-me_roads <- st_read("~/Data/me-roads/me-roads.shp")
+me_roads <- do.call(rbind, me_roads)
+
+# st_write(me_roads, "~/Data/me-roads/me-roads.shp")
+# me_roads <- st_read("~/Data/me-roads/me-roads.shp")
 
 as_tibble(me_roads) %>%
   select(-geometry) -> tt
 
-tt
 count(tt, RTTYP)
 
 # Route Type Code	Route Type Code Description
