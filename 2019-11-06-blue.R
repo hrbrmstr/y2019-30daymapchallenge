@@ -48,7 +48,7 @@ ggplot() +
   guides(fill = guide_colorbar(title.position = "top")) +
   labs(
     title = "World Happiness Report 2019",
-    subtitle = "Average Happiness across Countries (Pooled OLS);",
+    subtitle = "Average Happiness across Countries (Pooled OLS); Gray indicates no measurement available.",
     caption = "Data source: <https://worldhappiness.report/faq/>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
   ) +
   theme_ft_rc(grid="") +
