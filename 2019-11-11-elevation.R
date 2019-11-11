@@ -86,7 +86,7 @@ ggplot() +
   labs(
     x = NULL, y = NULL,
     title = "Mount Desert Island / Acadia National Park Elevation Contours",
-    caption = "Data source: {tigris}\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
+    caption = "Data source: ArcGIS/<maine.gov>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
   ) +
   theme_ipsum_es(grid="", plot_title_size = 24) +
   theme(plot.background = element_rect(fill = "#3a4f5b", color = "#3a4f5b")) +
@@ -94,6 +94,7 @@ ggplot() +
   theme(legend.title = element_text(color = "white")) +
   theme(legend.text = element_text(color = "white")) +
   theme(plot.title = element_text(hjust = 0.5, color = "white")) +
+  theme(plot.caption = element_text(color = "white")) +
   theme(legend.position = c(0.9, 0.275))
 
 

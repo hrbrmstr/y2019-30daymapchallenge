@@ -47,7 +47,7 @@ select(cmap, fips, geometry) %>%
   select(fips, lng = X, lat = Y) -> centers
 
 count(me_start, start_county, wt=workers, sort=TRUE) %>%
-  mutate(lab = glue::glue("{gsub(' County', '', start_county)} Total Outflow: {scales::comma(n)}")) -> labs
+  mutate(lab = glue::glue("{gsub(' County', '', start_county)} Outflow: {scales::comma(n)}")) -> labs
 
 left_join(
   me_start, centers,
@@ -61,8 +61,6 @@ left_join(
   mutate(lab = factor(lab, levels = labs$lab)) %>%
   glimpse() -> start
 
-st_bbox(cmap)
-
 ggplot() +
   geom_sf(data = cmap, color = "#b2b2b277", size = 0.05, fill = "#3B454A") +
   geom_curve(
@@ -75,9 +73,15 @@ ggplot() +
   ) +
   scale_color_distiller(
     limits = range(start$workers), labels = scales::comma,
-    trans = "log10", palette = "Reds", direction = 1
+    trans = "log10", palette = "Reds", direction = 1, name = "Worker\nOutflow"
   ) +
   coord_sf(datum = NA, ylim = c(-2500000.0, 1500000)) +
   facet_wrap(~lab) +
-  labs(x = NULL, y = NULL) +
-  theme_ft_rc(grid="")
+  labs(
+    x = NULL, y = NULL,
+    title = "Oh The Places [Mainers] Will Go [For Work]!",
+    subtitle = "2011-2015 5-Year ACS commuting outflows from Maine counties to out-of-state counties, sorted from most worker outflow to least.",
+    caption = "Data source: <www.census.gov/data/tables/2015/demo/metro-micro/commuting-flows-2015.html>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
+  ) +
+  theme_ft_rc(grid="", strip_text_family = font_es_bold, strip_text_size = 13) +
+  theme(strip.text = element_text(color = "white"))
