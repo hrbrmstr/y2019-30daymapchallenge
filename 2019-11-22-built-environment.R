@@ -53,7 +53,13 @@ st_intersection(st_buffer(towns, 0), york) %>%
   ) -> york_towns
 
 ggplot() +
-  geom_sf(data = me_walkies, color = "white", size = 0.125, aes(fill = WalkIndex)) +
+  geom_sf(data = border, color = "black", size = 0.75, fill=NA) +
+  geom_sf(data = me_walkies, color = "white", size = 0.0725, aes(fill = WalkIndex)) +
+  geom_sf(data = maine, color = "#2b2b2b", size = 0.25, fill = NA) +
+  geom_sf_label(
+    data = maine, aes(label = NAME), family = font_es_bold, size = 4, lineheight = 0.875,
+    label.padding = unit(0.05, "lines"), label.size = 0, fill = "#ffffff33"
+  ) +
   scale_fill_viridis_c(
     direction = -1, limits = c(0,20), name = "Walkability Index\n",
     breaks = seq(0, 20, 5), labels = c("0 (Nigh impassable)", 5, 10, 15, "20 (Very walkable)")
@@ -65,7 +71,8 @@ ggplot() +
     caption = "Data source: <catalog.data.gov/dataset/walkability-index>; {tigris}\n#30DayMapChallenge • <git.rud.is/hrbrmstr/y2019-30daymapchallenge>"
   ) +
   theme_ipsum_es(grid="") +
-  theme(legend.position = c(0.11, 0.5)) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  theme(legend.position = c(0.85, 0.25)) +
   theme(legend.title = element_text(family = font_es_bold, hjust = 0.5)) +
   theme(legend.box.background = element_rect(color = "#2b2b2b", fill = "white"))
 
