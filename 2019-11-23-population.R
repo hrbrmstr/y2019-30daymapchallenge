@@ -50,7 +50,7 @@ ggplot() +
     size = "2018 Audubon\nLoon Count",
     fill = "County Loon Count",
     title = "Maine Loon Population Counts (2018)",
-    caption = "Data source: Maine Audubon Societ <www.maineaudubon.org/news/results-of-the-2018-loon-count>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
+    caption = "Data source: Maine Audubon Society <www.maineaudubon.org/news/results-of-the-2018-loon-count>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
   ) +
   theme_ipsum_es(grid="") +
   theme(plot.title = element_text(hjust = 0.5)) -> gg
@@ -90,7 +90,7 @@ ggplot() +
     size = "2018 Audubon Loon Count",
     fill = "County Loon Count",
     title = "Maine Loon Population Counts (2018)",
-    caption = "Data source: Maine Audubon Societ <www.maineaudubon.org/news/results-of-the-2018-loon-count>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
+    caption = "Data source: Maine Audubon Society <www.maineaudubon.org/news/results-of-the-2018-loon-count>\nhttps://git.rud.is/hrbrmstr/y2019-30daymapchallenge • #30DayMapChallenge"
   ) +
   theme_ipsum_es(grid="") +
   theme(legend.position = "none") +
