@@ -1,14 +1,14 @@
 library(sf)
+library(albersusa) # hrbrmstr/albersusa
+library(rnaturalearth)
 library(hrbrthemes)
 library(tidyverse)
-
-#https://www.ncdc.noaa.gov/ibtracs/
 
 st_read(here::here("data/me-counties.json")) %>%
   st_set_crs(4326) %>%
   st_transform(albersusa::us_laea_proj) -> maine
 
-rnaturalearth::ne_states("united states of america", returnclass = "sf") %>%
+ne_states("united states of america", returnclass = "sf") %>%
   filter(!(postal %in% c("AK", "HI"))) %>%
   st_transform(albersusa::us_laea_proj) -> states
 
@@ -85,10 +85,8 @@ ggplot() +
     gb,
     xmin = -2031896.9,
     xmax =  7725851.8,
-    ymin =  2150000.0, # #732581.2,
+    ymin =  2150000.0,
     ymax =  5685229.4
-    # ymin =  1500000.0, # #732581.2,
-    # ymax =  4685229.4
   ) +
   geom_sf(data = states, color = "white", fill = "#3B454A", size = 0.0725) +
   geom_sf(data = maine, size = 0.125) +
@@ -108,9 +106,3 @@ ggplot() +
   theme(legend.direction = "horizontal") +
   theme(legend.key.width = unit(2, "lines")) +
   theme(legend.title = element_text(hjust = 1))
-
-
-
-
-
-
