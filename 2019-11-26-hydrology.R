@@ -41,7 +41,6 @@ ggplot() +
   theme(plot.background = element_rect(color = "black", fill = "black")) +
   theme(panel.background = element_rect(color = "black", fill = "black"))
 
-
 ggplot() +
   geom_sf(data = st_union(me_counties), fill = "#04005e", color = NA) +
   geom_sf(data = me_aw, size = 0, fill = "white", color = NA, show.legend = FALSE) +
@@ -53,6 +52,23 @@ ggplot() +
   ) +
   theme_ipsum_es(grid="") +
   theme(plot.title = element_text(hjust = 0.5))
+
+ggplot() +
+  geom_sf(data = st_union(me_counties), fill = "white", color = "#04005e", size = 0.125) +
+  geom_sf(data = me_aw, size = 0, fill = "#04005e", color = NA, show.legend = FALSE) +
+  geom_sf(data = me_rv, aes(size = I(sz)), color = "#04005e", fill = NA, show.legend = FALSE) +
+  coord_sf(datum = NA) +
+  labs(
+    title = "Maine Hydrology",
+    caption = "Data: {tigris} • <git.rud.is/hrbrmstr/y2019-30daymapchallenge> • #30DayMapChallenge"
+  ) +
+  theme_ipsum_es(grid="") +
+  theme(plot.title = element_text(color = "white", hjust = 0.5)) +
+  theme(plot.caption = element_text(color = "white", hjust = 0.5)) +
+  theme(plot.background = element_rect(color = "#04005e", fill = "#04005e")) +
+  theme(panel.background = element_rect(color = "#04005e", fill = "#04005e"))
+
+
 
 # vern <- st_read("~/Desktop/Maine_Significant_Vernal_Pools/Maine_Significant_Vernal_Pools.shp", stringsAsFactors=FALSE)
 #
